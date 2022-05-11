@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My NBA</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <script id="search-template" type="text/x-handlebars-template">
+        {{#each players}}
+                <div class="card">
+                    <img class="image" src="{{image}}">
+                    <div class="container">
+                        <h4><b>{{firstName}} {{lastName}}</b></h4>
+                        <p>Jersey:{{jersey}}</p>
+                        <p>Position:{{position}}</p>
+                    </div>
+                </div>
+        {{/each}}
+    </script>
+
+    <div class="container">
+        <input type="text" placeholder="search for NBA team" id="search-box">
+        <button type="submit" class="searchButton">Get Roster</button>
+    </div>
+    <div class="search_container">
+
+    </div>
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/handlebars/dist/handlebars.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
